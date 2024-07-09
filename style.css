@@ -1,0 +1,239 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+body{
+    overflow-x: hidden;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    background-repeat:initial;
+   
+}
+
+.wrapper{
+    min-height: 100vh;
+    width: 100vw;
+    color: var(--colorLight2);
+    
+}
+
+h1{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.tabs_switch{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    cursor: pointer;
+}
+.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    padding: 0.3rem;
+    border-radius: 4px;
+}
+.weather_container{
+    margin-block: 4rem;
+}
+
+.api-error-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.api-error-container.active{
+    display: flex;
+}
+
+.api-error-container img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.api-error-container p{
+    font-size: 1.75rem;
+}
+
+
+.grantbutton{
+    all: unset;
+    background-color:var(--colorDark2);
+    border: none;
+    color: var(--colorLight1);
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.grant_access{
+     /* imppppppppppppppppppppp */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.grant_access.active{
+   display: flex;
+}
+.grant_access img{
+    margin-bottom: 2rem;
+}
+.grant_access p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant_access p:last-of-type{
+    font-size:0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+.loading_screeen{
+    /* imppppppppppppppppppppp */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+}
+.loading_screeen.active{
+    display: flex;
+}
+.loading_screeen p{
+    font-size:2rem;
+    font-weight: 600;
+}
+
+.search_weather_style{
+    display: none;
+    width:90%;
+    max-width:550px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px; 
+    margin-bottom: 3rem;
+}
+.search_weather_style.active{
+    display: flex;
+}
+.search_input{
+    all: unset;
+    width: calc(100% - 80px);
+    height:2.5rem;
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5) ;
+}
+.search_input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+.search_input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.search_weather_style button{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--colorDark2);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information_container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.information_container.active{
+    display: flex;
+}
+.place_flag{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.place_flag img{
+    height: 1.75rem;
+    width: 1.75rem;
+}
+.place_flag p{
+    font-size: 2rem;
+    margin: 0;
+}
+.information_container [weather_description_city]{
+    font-size: 1.75rem;
+    font-weight: 200;
+}
+.information_container [weather_description_img]{
+    height: 90px;
+    width: 90px;
+}
+.information_container [city_temperature]{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.weather_info_box_last{
+    width: 90%;
+    display:flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 2rem;
+}
+
+.parameters{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color:rgba(219, 226, 239, 0.5) ;
+    padding: 1rem;
+    max-width: 200px;
+    gap: 5px 0;
+    border-radius: 5px;
+}
+.parameters img{
+    height: 60px;
+    width: 60px;
+}
+.parameters p:first-of-type{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.parameters  p:last-of-type{
+    font-size: 1.5rem;
+}
